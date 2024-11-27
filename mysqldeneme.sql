@@ -17,7 +17,7 @@ CREATE TABLE 'orders' (
   'id' int DEFAULT NULL,
   'productid' int DEFAULT NULL,
   'customerid' int DEFAULT NULL,
-  'quantity' int DEFAULT NULL,
+  'quantity' int DEFAULT NULL,  
   'orderdate' date DEFAULT NULL
 );
 
@@ -29,7 +29,7 @@ CREATE TABLE 'product' (
   'id' int DEFAULT NULL,
   'name' varchar(50) DEFAULT NULL,
   'price' varchar(50) DEFAULT NULL,
-  'stock' int DEFAULT NULL
+  'stock' int DEFAULT NULL  
 ) ;
 
 INSERT INTO 'product' VALUES (1,'Kale - Red','72.96',76),(2,'Mushroom - White Button','88.23',69),(3,'Potatoes - Idaho 80 Count','6.16',42),(4,'Wine - Blue Nun Qualitatswein','41.80',98),(5,'Artichokes - Knobless, White','34.06',81),(6,'Cranberries - Dry','86.00',15),(7,'Beans - Kidney, Canned','13.32',1),(8,'Cabbage - Red','69.89',64),(9,'Chip - Potato Dill Pickle','15.66',74),(10,'Nut - Hazelnut, Ground, Natural','73.96',26),(11,'Table Cloth 81x81 Colour','8.84',4),(12,'Lid - Translucent, 3.5 And 6 Oz','6.83',83),(13,'Sauce - Ranch Dressing','89.18',27),(14,'Potatoes - Mini Red','78.10',3),(15,'Coffee - Decaffeinato Coffee','23.66',13),(16,'Pork - Suckling Pig','79.88',76),(17,'Garlic - Elephant','75.88',93),(18,'Pork Casing','77.24',21),(19,'Bacardi Mojito','75.76',66),(20,'Beans - Soya Bean','88.46',67),(21,'Longos - Chicken Wings','33.95',24),(22,'Artichokes - Jerusalem','52.72',55),(23,'Wine - Pinot Noir Stoneleigh','96.82',25),(24,'Red Currant Jelly','32.99',56),(25,'Tomatoes - Yellow Hot House','2.92',9),(26,'Mushroom - King Eryingii','77.44',5),(27,'Iced Tea Concentrate','43.09',36),(28,'Yoghurt Tubes','90.87',100),(29,'Table Cloth - 53x69 Colour','12.67',100),(30,'Cheese - Cambozola','90.86',81),(31,'Tea - Honey Green Tea','69.73',86),(32,'Aspic - Clear','0.38',91),(33,'Pasta - Penne, Rigate, Dry','2.49',61),(34,'Red Currants','64.90',24),(35,'Pancetta','93.93',47),(36,'Pepper - Chillies, Crushed','30.53',81),(37,'Spoon - Soup, Plastic','99.88',71),(38,'Zucchini - Green','53.17',45),(39,'Peach - Halves','70.39',57),(40,'Dish Towel','47.93',74),(41,'Lettuce - Frisee','19.31',50),(42,'Bread - Pita','26.48',7),(43,'Wine - Gewurztraminer Pierre','32.05',42),(44,'Wine - Shiraz South Eastern','96.72',54),(45,'Shark - Loin','70.62',25),(46,'Tea - Lemon Green Tea','59.09',19),(47,'Sage - Fresh','82.33',6),(48,'Juice - Clamato, 341 Ml','73.80',0),(49,'Beef - Top Butt','38.78',52),(50,'Sauce - Caesar Dressing','58.91',16),(51,'Wine - Crozes Hermitage E.','58.59',55),(52,'Oil - Shortening,liqud, Fry','66.44',16),(53,'Cheese Cloth No 60','46.09',3),(54,'Cheese Cloth No 60','33.31',74),(55,'Asparagus - Mexican','56.15',16),(56,'Orange - Tangerine','77.57',73),(57,'Bar - Sweet And Salty Chocolate','53.96',89),(58,'Cookie - Dough Variety','96.00',95),(59,'Wasabi Paste','16.85',98),(60,'Chocolate - Milk Coating','2.87',45),(61,'Juice - Ocean Spray Kiwi','45.07',60),(62,'Tea - Camomele','69.91',77),(63,'Tea - Grapefruit Green Tea','44.98',51),(64,'Rosemary - Dry','20.91',28),(65,'Pork - Back, Short Cut, Boneless','11.08',25),(66,'Salt - Seasoned','48.64',76),(67,'Noodles - Steamed Chow Mein','42.66',82),(68,'Island Oasis - Pina Colada','23.63',43),(69,'Buffalo - Short Rib Fresh','55.55',36),(70,'Garbage Bags - Clear','10.27',69),(71,'Stock - Beef, Brown','44.01',61),(72,'Watercress','65.84',23),(73,'Wine - Savigny - Les - Beaune','32.40',18),(74,'Chips Potato Salt Vinegar 43g','89.81',74),(75,'Longos - Assorted Sandwich','49.22',14),(76,'Mushroom - Chanterelle, Dry','52.52',42),(77,'Table Cloth 62x114 Colour','70.61',42),(78,'Oranges - Navel, 72','76.01',15),(79,'Island Oasis - Magarita Mix','16.60',81),(80,'Chinese Foods - Thick Noodles','71.31',41),(81,'Pail With Metal Handle 16l White','3.22',93),(82,'Muffin - Blueberry Individual','1.05',20),(83,'Bread - Triangle White','43.87',57),(84,'Salt And Pepper Mix - Black','20.81',0),(85,'Five Alive Citrus','15.26',32),(86,'Corn Meal','13.82',1),(87,'Sword Pick Asst','73.85',12),(88,'Cheese - Asiago','58.22',88),(89,'Dikon','31.36',59),(90,'Cookies - Englishbay Chochip','48.56',48),(91,'Sambuca - Ramazzotti','31.75',40),(92,'Cookie Double Choco','38.44',34),(93,'Filling - Mince Meat','12.40',18),(94,'Chocolate - Feathers','96.88',40),(95,'Wine - Manischewitz Concord','17.26',74),(96,'Sauce - Cranberry','77.39',93),(97,'Lettuce - Spring Mix','0.94',45),(98,'Raisin - Golden','12.78',32),(99,'Wonton Wrappers','55.10',99),(100,'Trueblue - Blueberry','88.95',88);
@@ -42,7 +42,7 @@ INSERT INTO 'product' VALUES (1,'Kale - Red','72.96',76),(2,'Mushroom - White Bu
 CREATE TABLE customer (
   id INT IDENTITY(1,1) PRIMARY KEY, -- IDENTITY ile otomatik artan sütun tanımı
   customerid int,
-  first_name nVARCHAR(max),          -- DEFAULT NULL kaldırıldı
+  first_name nVARCHAR(max),          -- DEFAULT NULL kaldırıldı deneme yapilacak customertablosi
   last_name nVARCHAR(max),
   email nVARCHAR(max),
   phonenumber nVARCHAR(max)
